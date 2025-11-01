@@ -1,0 +1,27 @@
+.h1 {
+    font-size: 1.5rem;
+}
+
+.tittle span::after {
+    content: 'Koy Sokkea';
+    animation: words 5s infinite;
+}
+
+@keyframes words {
+
+    0%,
+    33% {
+        content: 'Koy Sokkea';
+        color: blue;
+    }
+    34%,
+    66% {
+        content: 'a student';
+        color: red;
+    }
+    67%,
+    100% {
+        content: 'a programmer';
+        color: green;
+    }
+}
