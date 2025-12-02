@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment</title>
+  <link rel="stylesheet" href="/css/payment.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Dangrek&family=Fjalla+One&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanuman:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Khmer&family=Konkhmer+Sleokchher&family=Koulen&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/brands.min.css" integrity="sha512-WxpJXPm/Is1a/dzEdhdaoajpgizHQimaLGL/QqUIAjIihlQqlPQb1V9vkGs9+VzXD7rgI6O+UsSKl4u5K36Ydw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <form onsubmit="return false;">
+    <div class="container">
+      <h1>Booking Payment</h1>
+    <label for="Payment">Payment:</label>
+    <input class="placeholder" type="number" placeholder="Enter Payment" id="payment" required>
+    <i class="fa-solid fa-eye"></i>
+    <button onclick="getPayment()" type="submit">Generate</button>
+      </div>
+  </form>
+  <script src="/javascript/payment.js"></script>
+</body>
+
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Payment</title>
+  <style>
+    body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial;max-width:640px;margin:40px auto;padding:0 16px;}
+    h1{font-size:1.6rem;margin-bottom:0.5rem}
+    form{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+    label{min-width:70px}
+    input[type="number"]{padding:8px;border:1px solid #ccc;border-radius:6px;min-width:160px}
+    button{padding:8px 14px;border:none;border-radius:6px;background:#0b74de;color:#fff;cursor:pointer}
+    button:disabled{opacity:0.6;cursor:not-allowed}
+    #message{margin-top:14px;font-size:1rem}
+    #message.success{color:green}
+    #message.error{color:#b00020}
+    .note{font-size:0.9rem;color:#555;margin-top:6px}
+  </style>
+</head>
+<body>
+  <h1>Booking Payment</h1>
+
+  <form id="paymentForm" novalidate>
+    <label for="payment">Payment:</label>
+    <input id="payment" name="payment" type="number" inputmode="decimal" step="0.01" min="0" placeholder="Enter amount (e.g. 121.50)">
+    <button type="submit" id="generateBtn">Generate</button>
+  </form>
+
+  <p id="message" role="status" aria-live="polite"></p>
+  <p class="note">We format numbers as USD. Change currency in the JavaScript if you need another.</p>
+
+  <script>
+    // Wait for DOM ready
+    (function () {
+      const form = document.getElementById('paymentForm');
+      const input = document.getElementById('payment');
+      const message = document.getElementById('message');
+      const btn = document.getElementById('generateBtn');
+
+      // Formatter (use Intl for best results)
+      const usdFormatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+        maximumFractionDigits: 2,
+      });
+
+      form.addEventListener('submit', function (evt) {
+        evt.preventDefault(); // prevent page reload
+
+        // Trim and parse value (allow decimal)
+        const raw = input.value;
+        // If empty string -> raw === "" so parseFloat gives NaN
+        const value = parseFloat(raw);
+        // Validation
+        if (raw.trim() === '') {
+          showMessage('⚠ Please enter a payment amount.', 'error');
+          input.focus();
+          return;
+        }
+        if (isNaN(value)) {
+          showMessage('⚠ That is not a valid number. Use digits only (e.g. 121 or 121.50).', 'error');
+          input.focus();
+          return;
+        }
+
+        if (value < 0) {
+          showMessage('⚠ Payment must be zero or positive.', 'error');
+          input.focus();
+          return;
+        }
+
+        // Format and show success
+        const formatted = usdFormatter.format(value);
+        showMessage('💰 Payment received: ' + formatted, 'success');
+
+        // Optionally clear input or disable button briefly
+        // input.value = '';
+      });
+
+      function showMessage(text, type) {
+        message.textContent = text;
+        message.className = type; // 'success' or 'error'
+      }
+    })();
+  </script>
+</body>
+</html> -->

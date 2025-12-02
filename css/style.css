@@ -12,7 +12,7 @@
  }
 
  body {
-     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     font-family: "Momo Trust Display", sans-serif;
      background: #f8f9fa;
      color: #212529;
      overflow-x: hidden;
@@ -93,29 +93,31 @@
      }
  }
 
-  .tittle span::after {
-    content: 'You';
-    animation: words 5s infinite;
-}
+ .tittle span::after {
+     content: 'You';
+     animation: words 5s infinite;
+ }
 
-@keyframes words {
+ @keyframes words {
 
-    0%,
-    33% {
-        content: 'You';
-        color: blue;
-    }
-    34%,
-    66% {
-        content: 'Us';
-        color: red;
-    }
-    67%,
-    100% {
-        content: 'World';
-        color: green;
-    }
-}
+     0%,
+     33% {
+         content: 'You';
+         color: blue;
+     }
+
+     34%,
+     66% {
+         content: 'Us';
+         color: red;
+     }
+
+     67%,
+     100% {
+         content: 'World';
+         color: green;
+     }
+ }
 
  .btn-primary {
      background: #0d6efd;
