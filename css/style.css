@@ -13,9 +13,8 @@
 
  body {
      font-family: "Momo Trust Display", sans-serif;
-     background: #f8f9fa;
-     color: #212529;
-     overflow-x: hidden;
+   background:url("/3fc9a67661e362027ea5f7f304e2a856.gif") no-repeat;
+    background-size:cover;
  }
 
  a {
@@ -157,7 +156,7 @@
          transform: translateX(-50%) translateY(-10px)
      }
  } */
-
+  
  /* Image mask */
  .hero-img {
      mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path d="M47.7,-61.7C61.9,-53.5,73.9,-38.5,77.9,-21.2C81.9,-3.9,77.9,15.7,70.3,32.6C62.7,49.5,51.5,63.7,37.3,70.1C23.1,76.5,5.9,75.1,-10.9,70.3C-27.7,65.5,-45.4,57.3,-57.9,44.3C-70.4,31.3,-77.7,13.5,-77.8,-4.5C-77.9,-22.5,-70.8,-40.9,-58.6,-51.3C-46.4,-61.7,-29,-64.1,-12.5,-63.6C4,-63.1,20,-59.7,47.7,-61.7Z" transform="translate(100 100)"/></svg>');

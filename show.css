@@ -1,0 +1,101 @@
+* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0; 
+        }
+body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-family: 'Ubuntu';
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            color: rgb(0, 133, 24);
+            font-size: 27px;
+        }
+        label {
+            font-family: 'Momo';
+            display: block;
+            margin-top: 10px;
+        }
+        input {
+            margin-top: 5px;
+            padding: 8px;
+            width: 370px;
+            box-sizing: border-box;
+            border-radius: 7px;
+            border: 1px solid rgb(0, 152, 20);
+        }
+        button {
+            font-family: 'Roboto';
+            margin-top: 15px;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: 2px solid rgb(8, 0, 255);
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #009608;
+        }
+        .container {
+            /* background: #00b3fa;
+            background: linear-gradient(90deg,rgba(0, 179, 250, 1) 0%, rgba(0, 255, 106, 1) 50%, rgba(227, 0, 0, 1) 100%);   */
+            max-width: 400px;
+            margin: auto;
+            margin-top: 50px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;        
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; 
+            opacity: 0;
+            transition: 2s;
+        }
+        /* Create class list or subclass => show*/
+        .container.show{
+            opacity: 1;
+            transition: 2s;         /* slow mo*/
+        }
+        input:focus{
+            outline: 0;
+            border: 1px solid blue;           
+        }
+        button:hover{
+            transform: scale(1.1);
+        }
+        @font-face {
+            font-family: 'Ubuntu';
+            src: url('../FONT/Ubuntu-Medium.ttf');
+        }
+        @font-face {
+            font-family: 'Momo';
+            src: url('../FONT/MomoTrustDisplay-Regular.ttf');
+        }
+        @font-face {
+            font-family: 'Roboto';
+            src: url('../FONT/Roboto-Bold.ttf');
+        }
+        i{
+        position: absolute;
+        font-size: 25px;
+        color: green;
+        margin-left: 330px;
+        cursor: pointer;
+        margin-top: 9px;
+        }
+        #btn-show{
+            background-color: #009608;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-family: 'Momo';
+            margin-left: 770px;
+            margin-top: 30px;
+                      
+        }
+        #btn-show:hover{
+            background-color: blue;
+        }
